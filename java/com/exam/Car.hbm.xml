@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 11, 2019 12:18:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Car" table="car" catalog="pro1" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="carname" type="string">
+            <column name="carname" length="45" />
+        </property>
+        <property name="img" type="string">
+            <column name="img" length="45" />
+        </property>
+        
+        
+        
+        <property name="carbrand" type="string">
+            <column name="carbrand" length="45" />
+        </property>
+        <property name="price" type="string">
+            <column name="price" length="45" />
+        </property>
+       
+        <property name="carcolour" type="string">
+            <column name="carcolour" length="45" />
+        </property>
+       
+        
+        
+        
+        
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <property name="fare" type="string">
+            <column name="fare" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

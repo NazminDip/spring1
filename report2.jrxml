@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9f875a27-7e74-4d7a-a51d-73522ff38ca0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     book.`cid` AS book_cid,
+     book.`cname` AS book_cname,
+     book.`email` AS book_email,
+     book.`carname` AS book_carname,
+     book.`carcolour` AS book_carcolour,
+     book.`startdate` AS book_startdate,
+     book.`returndate` AS book_returndate,
+     book.`location` AS book_location,
+     book.`bookingamount` AS book_bookingamount,
+     book.`due` AS book_due,
+     book.`paymentdetail` AS book_paymentdetail
+FROM
+     `book` book]]>
+	</queryString>
+	<field name="book_cid" class="java.lang.Integer"/>
+	<field name="book_cname" class="java.lang.String"/>
+	<field name="book_email" class="java.lang.String"/>
+	<field name="book_carname" class="java.lang.String"/>
+	<field name="book_carcolour" class="java.lang.String"/>
+	<field name="book_startdate" class="java.lang.String"/>
+	<field name="book_returndate" class="java.lang.String"/>
+	<field name="book_location" class="java.lang.String"/>
+	<field name="book_bookingamount" class="java.lang.String"/>
+	<field name="book_due" class="java.lang.String"/>
+	<field name="book_paymentdetail" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="328" y="58" width="204" height="39" uuid="900da42e-7f30-4c43-ad85-f3e5d0702063"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Booking Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="e0c55ab9-9694-4264-be5b-f0dccf6a8483"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="72" height="15" forecolor="#736343" uuid="34d21c11-6a1d-4c4d-bf00-021532eea474"/>
+				<text><![CDATA[book_cid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="72" y="0" width="72" height="15" forecolor="#736343" uuid="1f78b7e1-3eca-4795-91f3-dba771356c20"/>
+				<text><![CDATA[book_cname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="144" y="0" width="72" height="15" forecolor="#736343" uuid="592aca7f-a7d8-4d1c-a021-aa0de8936eb4"/>
+				<text><![CDATA[book_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="216" y="0" width="72" height="15" forecolor="#736343" uuid="2b1bf569-eb59-4d5e-b6fd-b811136ab8ab"/>
+				<text><![CDATA[book_carname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="288" y="0" width="72" height="15" forecolor="#736343" uuid="4ab0268f-045a-4524-ac54-9a47c9bf771d"/>
+				<text><![CDATA[book_carcolour]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="360" y="0" width="72" height="15" forecolor="#736343" uuid="5694c43c-439b-47cc-a0b0-57769d9ccc92"/>
+				<text><![CDATA[book_startdate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="432" y="0" width="72" height="15" forecolor="#736343" uuid="b51ad8ee-30eb-4764-873c-c4cf147a25e6"/>
+				<text><![CDATA[book_returndate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="0" width="72" height="15" forecolor="#736343" uuid="b538770d-4b36-4972-88df-8e2199742fac"/>
+				<text><![CDATA[book_location]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="576" y="0" width="72" height="15" forecolor="#736343" uuid="3f032cd6-756d-4cea-a9a3-8ee38eaaee33"/>
+				<text><![CDATA[book_bookingamount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="648" y="0" width="72" height="15" forecolor="#736343" uuid="57f5c2b7-eced-41e0-9b73-4dffeb1c68aa"/>
+				<text><![CDATA[book_due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="720" y="0" width="72" height="15" forecolor="#736343" uuid="57c33b48-a30e-4dc2-aba0-4ecc4c84aaf2"/>
+				<text><![CDATA[book_paymentdetail]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="4140472c-acc0-4ff8-98ae-2316ef359165"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="72" height="15" uuid="6141a49f-a58a-49ac-95bb-2168b7285ccc"/>
+					<textFieldExpression><![CDATA[$F{book_cid}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="72" y="0" width="72" height="15" uuid="b6986f56-e538-489f-b451-c05ed781a0bd"/>
+					<textFieldExpression><![CDATA[$F{book_cname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="144" y="0" width="72" height="15" uuid="1f6a8d6b-af41-4691-9f66-64a7109e39fa"/>
+					<textFieldExpression><![CDATA[$F{book_email}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="216" y="0" width="72" height="15" uuid="a88b9e7e-d3fd-4017-bc3b-87b3c0560ebe"/>
+					<textFieldExpression><![CDATA[$F{book_carname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="288" y="0" width="72" height="15" uuid="08c26ab5-0be7-44d9-81dd-5854a525cccd"/>
+					<textFieldExpression><![CDATA[$F{book_carcolour}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="360" y="0" width="72" height="15" uuid="c1234bc1-2766-49e2-9841-8583df68b918"/>
+					<textFieldExpression><![CDATA[$F{book_startdate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="432" y="0" width="72" height="15" uuid="0b52459c-f209-4db6-b65e-7782c19d76dd"/>
+					<textFieldExpression><![CDATA[$F{book_returndate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="504" y="0" width="72" height="15" uuid="f459472d-b42f-474f-af00-f7ece79b6d05"/>
+					<textFieldExpression><![CDATA[$F{book_location}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="576" y="0" width="72" height="15" uuid="28a742b5-fe84-40ef-b767-d6b0235a7b85"/>
+					<textFieldExpression><![CDATA[$F{book_bookingamount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="648" y="0" width="72" height="15" uuid="22b8aea8-e9c2-4a56-8efc-fe4f15768324"/>
+					<textFieldExpression><![CDATA[$F{book_due}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="720" y="0" width="72" height="15" uuid="b5c06734-e177-4aa6-a6aa-12e2afd531e9"/>
+					<textFieldExpression><![CDATA[$F{book_paymentdetail}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="f2db9a9c-dbb4-4da3-9dfc-fc3264197bd9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="4d8eb9d4-8975-4b92-9ff8-428bfa72ef35"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="ca4e7e79-ada3-4724-8ae6-74e242ef1771"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="e634605b-8d50-41f0-9732-d9294a35a029"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="1e15be1a-5c4a-4796-930e-578cce61551a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

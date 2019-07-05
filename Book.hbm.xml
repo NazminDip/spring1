@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 11, 2019 12:18:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Book" table="book" catalog="pro1" optimistic-lock="version">
+        <id name="cid" type="java.lang.Integer">
+            <column name="cid" />
+            <generator class="identity" />
+        </id>
+        <property name="cname" type="string">
+            <column name="cname" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        
+         <property name="carname" type="string">
+            <column name="carname" length="45" />
+        </property>
+        
+         <property name="carcolour" type="string">
+            <column name="carcolour" length="45" />
+        </property>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <property name="startdate" type="string">
+            <column name="startdate" length="45" />
+        </property>
+        <property name="returndate" type="string">
+            <column name="returndate" length="45" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="45" />
+        </property>
+        <property name="bookingamount" type="string">
+            <column name="bookingamount" length="45" />
+        </property>
+        <property name="due" type="string">
+            <column name="due" length="45" />
+        </property>
+        <property name="paymentdetail" type="string">
+            <column name="paymentdetail" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
